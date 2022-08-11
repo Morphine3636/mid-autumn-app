@@ -1,5 +1,6 @@
 const express = require('express'),
     mongoose = require('mongoose'),
+    userApi=require('./api/userApi'),
     app = express(),
     port = 3000;
 
@@ -14,11 +15,7 @@ db.once('open', () => {
         连接数据库成功😁
     `)
 })
-
-app.get('/userList',(req,res)=>{
-    console.log(req,res)
-    res.send({ name: 'abc' })
-})
+app.use('/api',userApi);
 
 app.listen(port, () => {
     console.log(`listening on port ${port}`)
