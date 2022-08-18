@@ -15,6 +15,13 @@ db.once('open', () => {
         连接数据库成功😁
     `)
 })
+app.all('*',(req,res,next)=>{
+    res.header('Access-Control-Allow-Origin','*');
+    res.header('Access-Control-Allow-Headers','content-type');
+    res.header('Access-Control-Allow-Methods','POST,GET');
+    next();
+})
+
 app.use('/api',userApi);
 
 app.listen(port, () => {

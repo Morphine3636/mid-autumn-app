@@ -4,7 +4,5 @@ import Admin from './AdminMidAutumn/index.jsx';
 import './Assets/global.scss';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <Admin />
-  </React.StrictMode>
+  <Admin />
 );

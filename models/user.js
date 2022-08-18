@@ -10,7 +10,6 @@ const UserSchema = new Schema({
     "lotteryTimes": Number,   // 抽奖次数
     "prize": String,          // 奖品
     "couponCode": String,     // 券码
-    "isPrize": Boolean,       // 是否发放奖品
     "lastLotteryTime": String  // 最后一次抽奖的日期
 })
 

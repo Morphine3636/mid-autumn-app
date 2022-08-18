@@ -1,4 +1,4 @@
-const url=`http://localhost:3000/app`;
+const url=`http://localhost:3000/api`;
 
 const Api={
     getUserList:`${url}/getUserList`,
