@@ -1,12 +1,9 @@
 const express = require('express'),
 	userApi = express.Router(),
 	user = require('../models/user');
-
-/**
- * @description: 查询用户列表
- * @return {*}
- */
-userApi.get('/userList', (req, res) => {
+	
+// 获取用户列表
+userApi.get('/getUserList', (req, res) => {
 	user.find({}, (err, data) => {
 		if (err) {
 			throw err

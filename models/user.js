@@ -1,20 +1,17 @@
-/*
- * @Author: Morphine3636 morphine3636@163.com
- * @Date: 2022-08-10 18:49:45
- * @LastEditors: Morphine3636 morphine3636@163.com
- * @LastEditTime: 2022-08-11 16:27:55
- * @FilePath: /94/React/mid-autumn-app/models/user.js
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- */
 const mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 // 用户数据表
 const UserSchema = new Schema({
-    "userName": String,      // 用户名
-    "address": String,       // 用户地址
-    "isDraw": Boolean,       // 中奖标识
-    "isActivity": Boolean,   // 参与标识
+    "userName": String,       // 用户名
+    "address": String,        // 用户详细地址
+    "nativePlace": String,    // 籍贯
+    "isDraw": Boolean,        // 中奖标识(是否中奖)
+    "lotteryTimes": Number,   // 抽奖次数
+    "prize": String,          // 奖品
+    "couponCode": String,     // 券码
+    "isPrize": Boolean,       // 是否发放奖品
+    "lastLotteryTime": String  // 最后一次抽奖的日期
 })
 
-module.exports = mongoose.model('user', UserSchema,'user')
+module.exports = mongoose.model('user', UserSchema, 'user')
