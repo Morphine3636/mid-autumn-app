@@ -1,10 +1,17 @@
 import axios from "axios";
+import { message } from 'antd';
 
-axios.defaults.headers = {}
+axios.defaults.headers = {
+    'authorization': typeof localStorage.k ==='undefined'?'': localStorage.k
+}
 
 // 错误码管控
 function responseCode(code, info) {
-
+    if( code==='401' ){
+        message.destroy();
+        message.error('登录超时,请重新登录.')
+        localStorage.clear();
+    }
 }
 
 // 请求封装
