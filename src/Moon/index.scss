@@ -1,0 +1,33 @@
+.moon {
+    width: 750px;
+    min-height: 100vh;
+    text-align: center;
+  // .canvas-container{
+  //   width:750px!important;
+  //   .lower-canvas{
+  //     width:750px!important;
+  //   }
+  //   .upper-canvas{
+  // width:750px!important;
+  //   }
+  // }
+    .canvas {
+      border: 1px solid red;
+    }
+  
+    .log {
+      position: absolute;
+      top: 600px;
+      width: 750px;
+      height: 600px;
+      border: 1px solid red;
+      overflow: scroll;
+    }
+  
+    .score {
+      width: 100%;
+      position: absolute;
+      top: 1200px;
+      text-align: center;
+    }
+  }
