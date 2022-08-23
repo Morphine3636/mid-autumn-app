@@ -1,7 +1,6 @@
 import { fabric } from 'fabric';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Back from '@/Components/back';
 import './index.scss';
 var canvas = {};
 export default function Moon() {
@@ -88,6 +87,7 @@ export default function Moon() {
         if (volatility < 10) {
             return 100;
         }
+        return 20;
     }
     /**
      * 计算周长
@@ -181,7 +181,6 @@ export default function Moon() {
                 </div>
                 <canvas className="canvas" id="canvas" width={window.screen.availWidth} height={300}></canvas>
             </div>
-            <Back />
         </div>
     )
 }

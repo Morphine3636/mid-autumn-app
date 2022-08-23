@@ -27,14 +27,35 @@
     > .tipScore{
       color: #FFF697;
       font-size: 60px;
-      font-family:sans-serif;
+      font-family:serif;
       > span {
         font-size: 16px;
+      }
+      > p{
+        font-size: 16px;
+        margin-top: 10px;
+        font-weight: 300;
+        > .bold{
+          font-weight: bold;
+          font-family: serif;
+        }
       }
     }
     > img{
       width: 340px;
       margin-top: 40px;
+    }
+  }
+}
+.moonsuccess{
+  background-image: url('../Assets/moonsuccess.png');
+  > .menu{
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    > a{
+      margin: 0 15px;
     }
   }
 }
