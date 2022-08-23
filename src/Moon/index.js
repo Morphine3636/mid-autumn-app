@@ -1,6 +1,7 @@
 import { fabric } from 'fabric';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Back from '@/Components/back';
 import './index.scss';
 var canvas = {};
 export default function Moon() {
@@ -13,7 +14,7 @@ export default function Moon() {
         // 基础圆周长
         perimeter: 0,
         // 基础圆半径
-        radius: 100,
+        radius: 130,
         // 基础圆位置
         pos: {
             x: parseInt(window.screen.availWidth * 0.5),
@@ -23,17 +24,12 @@ export default function Moon() {
     useEffect(() => {
         initCanvas();
     }, [])
-    // 重置
-    const delCanvas = () => {
-        navigate('/MoonRedirect')
-    };
     const handleScore = () => {
         // 求出用户圆与基础圆的周长比例
         let userPerimeter = calculateLinePerimeter();
         let userRate = parseInt(
             (userPerimeter / baseCircle.perimeter) * 100
         );
-        console.log('用户圆周长占比', userRate + '%');
         // 如果用户画的圆 不足基础圆周长的90% 则直接给低分
         if (userRate >= 90) {
             let results = calculateDistancesArr(
@@ -55,14 +51,16 @@ export default function Moon() {
             let volatility = parseInt((percentage / avg) * 100);
 
             setScore(scoringConditions(volatility));
+            navigate(`/MoonSuccess?score=${scoringConditions(volatility)}`)
         } else if (userRate >= 50) {
             setScore(scoringConditions(60));
+            navigate(`/MoonSuccess?score=${scoringConditions(60)}`)
         } else {
             setScore(scoringConditions(70));
+            navigate(`/MoonSuccess?score=${scoringConditions(70)}`)
         }
     };
     const scoringConditions = (volatility) => {
-        console.log(volatility)
         if (volatility > 80) {
             return 10;
         }
@@ -123,10 +121,10 @@ export default function Moon() {
     const initBaseCircle = () => {
         var circle = new fabric.Circle({
             radius: baseCircle.radius,
-            fill: '#fff',
+            fill: 'rgba(255, 0, 0, 0)',
             left: baseCircle.pos.x,
             top: baseCircle.pos.y,
-            stroke: '#409EFF',
+            stroke: 'rgba(255, 0, 0, 0)',
             lineWidth: 20,
             originX: 'center',
             originY: 'center'
@@ -164,9 +162,6 @@ export default function Moon() {
         // 设置自由绘画模式 画笔颜色与画笔线条大小
         canvas.freeDrawingBrush.color = 'rgb(245, 57, 57)';
         canvas.freeDrawingBrush.width = 4;
-
-        // canvas.on('mouse:down', (e) => {
-        // });
         canvas.on('mouse:move', (e) => {
             let pointer = JSON.stringify(e.pointer);
             setLog(log + `<br/>move:${pointer}`)
@@ -179,12 +174,14 @@ export default function Moon() {
     };
     return (
         <div className="moon">
-            <canvas className="canvas" id="canvas" width={window.screen.availWidth} height={300}></canvas>
-            <div className="score">
-                <button onClick={delCanvas}>重置</button>
-                <p>得分：{score}</p>
+            <div className='box'>
+                <img src={ require('@/Assets/moonhua.png') }></img>
+                <div className='tip'>
+                    <img src={ require('@/Assets/tip.png') }></img>
+                </div>
+                <canvas className="canvas" id="canvas" width={window.screen.availWidth} height={300}></canvas>
             </div>
-            
+            <Back />
         </div>
     )
 }

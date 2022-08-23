@@ -1,6 +1,7 @@
 import { useRoutes,Navigate } from "react-router-dom";
 import Home from '@/Home';
 import Moon from '@/Moon';
+import MoonSuccess from '@/MoonSuccess';
 import AdminMidAutumn from '@/AdminMidAutumn';
 import MyLottey from '@/MyLottey';
 import UserInfo from '@/UserInfo';
@@ -12,6 +13,9 @@ export default function Router() {
         }, {
             path: '/Moon',
             element: <Moon />
+        },{
+            path: '/MoonSuccess',
+            element: <MoonSuccess />
         }, {
             path: '/MyLottey',
             element: <MyLottey />

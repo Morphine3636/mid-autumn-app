@@ -6,7 +6,35 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;    
-  > .canvas-container{
-    top: 100px;
+  .canvas-container{
+    top: 66px;
+    z-index: 999;
+    position: absolute !important;
+  }
+  > .box{
+    position: relative;
+    width: 100%;
+    height: 395px;
+    text-align: center;
+    > .tip{
+      position: absolute;
+      top: 180px;
+      width: 100%;
+      > img {
+        width: 180px;
+      }
+    }
+    > .tipScore{
+      color: #FFF697;
+      font-size: 60px;
+      font-family:sans-serif;
+      > span {
+        font-size: 16px;
+      }
+    }
+    > img{
+      width: 340px;
+      margin-top: 40px;
+    }
   }
 }

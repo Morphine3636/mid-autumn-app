@@ -29,7 +29,7 @@ export default function UserInfo() {
             <div className='list'>
                 <label>所在区域</label>
                 <div className='ipt name' onClick={() => setVisible(true)}>
-                    { defaultProvince.length===0?<a>请选择所在区域</a>:<a className='active'>{`${defaultProvince[0]}-${defaultProvince[1]}-${defaultProvince[2]}`}</a>}
+                    {defaultProvince.length === 0 ? <a>请选择所在区域</a> : <a className='active'>{`${defaultProvince[0]}-${defaultProvince[1]}-${defaultProvince[2]}`}</a>}
                 </div>
             </div>
             <div className='list'>
@@ -45,11 +45,8 @@ export default function UserInfo() {
                 onClose={() => {
                     setVisible(false)
                 }}
-                onConfirm={(val, extend) => {
+                onConfirm={(val) => {
                     setDefaultProvince(val)
-                }}
-                onSelect={val => {
-                    console.log('onSelect', val)
                 }}
             />
             <div className='editAddress'>
