@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Api from '@/Utils/Api';
 import { Http } from '@/Utils/Http';
-import { message } from 'antd';
 import axios from 'axios';
 import './index.scss';
 
@@ -32,8 +31,8 @@ export default function Admin() {
                         password: passW
                     });
                     if (code === 200) {
-                        message.destroy()
-                        message.success('😁 登录成功,欢迎回来!')
+                        // message.destroy()
+                        // message.success('😁 登录成功,欢迎回来!')
                         axios.defaults.headers = {
                             'authorization': `Bearer ${data.token}`
                         }
@@ -53,8 +52,8 @@ export default function Admin() {
         if (code === 200) {
             setData(data)
         } else {
-            message.destroy()
-            message.error(data)
+            // message.destroy()
+            // message.error(data)
         };
     }
 

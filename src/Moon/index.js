@@ -1,6 +1,7 @@
 import { fabric } from 'fabric';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './index.scss';
 var canvas = {};
 export default function Moon() {
     let navigate = useNavigate();
@@ -12,7 +13,7 @@ export default function Moon() {
         // 基础圆周长
         perimeter: 0,
         // 基础圆半径
-        radius: 50,
+        radius: 100,
         // 基础圆位置
         pos: {
             x: parseInt(window.screen.availWidth * 0.5),
@@ -183,6 +184,7 @@ export default function Moon() {
                 <button onClick={delCanvas}>重置</button>
                 <p>得分：{score}</p>
             </div>
+            
         </div>
     )
 }

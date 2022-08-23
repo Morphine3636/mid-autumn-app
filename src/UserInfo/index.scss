@@ -1,0 +1,46 @@
+.userInfo{
+    > .list {
+        background-color: #fff;
+        margin: 8px 10px;
+        display: flex;
+        padding: 20px 20px;
+        justify-content: space-between;
+        border-radius: 10px;
+        align-items: center;
+        font-size: 16px;
+        > label{
+            font-size: 16px;
+        }
+        > .ipt{
+            width: 260px;
+            text-align: right;
+            > a{
+                font-weight: 300;
+                font-size: 16px;
+                color: #999;
+            }
+            > .active{
+                color: #222;
+            }
+        }
+        input::placeholder {
+            font-weight: 300;
+            color: #999;
+        }
+        input{
+            text-align: right;
+            border: none;
+            font-size: 16px;
+            outline:none;
+        }
+    }
+    > .editAddress{
+        text-align: center;
+        margin-top: 80px;
+        > a {
+            > img{
+                width: 160px;
+            }
+        }
+    }
+}
