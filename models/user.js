@@ -5,6 +5,7 @@ const mongoose = require('mongoose'),
 const UserSchema = new Schema({
     "userName": String,       // 用户名
     "password": String,       // 密码
+    "realName": String,       // 真实姓名
     "address": String,        // 用户详细地址
     "nativePlace": String,    // 籍贯
     "isDraw": Boolean,        // 中奖标识(是否中奖)

@@ -5,6 +5,7 @@ import MoonSuccess from '@/MoonSuccess';
 import AdminMidAutumn from '@/AdminMidAutumn';
 import MyLottey from '@/MyLottey';
 import UserInfo from '@/UserInfo';
+import Draw from '@/Draw';
 export default function Router() {
     let routes = useRoutes([
         {
@@ -22,6 +23,9 @@ export default function Router() {
         }, {
             path: '/UserInfo',
             element: <UserInfo />
+        }, {
+            path: '/Draw',
+            element: <Draw />
         }, {
             path: '/AdminMidAutumn',
             element: <AdminMidAutumn />

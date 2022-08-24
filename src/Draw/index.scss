@@ -1,0 +1,217 @@
+.draw{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-image: url('../Assets/draw.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    .goAddress{
+        position: absolute;
+        width: 210px;
+        height: 60px;
+        display: inline-block;
+        left: 80px;
+        top: 335px;
+    }
+    >.myLotteyBtn{
+        position: fixed;
+        top: 10px;
+        right: 10px;
+    }
+    > .draw-box{
+        margin: 0 auto;
+        margin-top: 240px;
+        width: 380px;
+        position: relative;
+        text-align: center;
+        > .d{
+            position: absolute;
+            font-size: 14px;
+            color: #F59D8D;
+            top: 422px;
+            width: 100%;
+            z-index: 2;
+        }
+        > .success {
+            position: absolute;
+            top: 110px;
+            left: 140px;
+            > img {
+                width: 100px;
+                height: 120px;
+            }
+        }
+    }
+    > .action{
+        text-align: center;
+        width: 100%;
+        position: fixed;
+        bottom: 40px;
+    }
+}
+
+.outher {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border-radius: 50%;
+}
+
+.wapper {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 33px;
+    left: 41px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: black;
+    transform: rotate(22.5deg);
+}
+
+.left {
+    position: absolute;
+    width: 150px;
+    height: 300px;
+    left: 0;
+    overflow: hidden;
+}
+
+.left .text {
+    position: absolute;
+    top: 28px;
+    left: 52%;
+    color: #E92802;
+    font-size: 14px;
+    transform: rotate(-22.5deg);
+    text-align: center;
+}
+.left img{
+    position: absolute;
+    top: 48px;
+    left: 63%;
+    transform: rotate(-70deg);
+}
+
+.right img{
+    top: 48px;
+    left: 6%;
+    position: absolute;
+    transform: rotate(-20deg);
+}
+
+.right .text {
+    position: absolute;
+    top: 25px;
+    left: 14%;
+    font-size: 14px;
+    color: #E92802;
+    transform: rotate(22.5deg);
+    text-align: center;
+}
+
+
+.right {
+    position: absolute;
+    width: 150px;
+    height: 300px;
+    right: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+.left div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: right center;
+}
+
+.left div.t0 {
+    background-color: #FDDDD7;
+}
+
+
+.left div.t1 {
+    background-color: #FFF;
+    transform: rotate(-45deg);
+}
+
+.left div.t2 {
+    background-color: #FDDDD7;
+    transform: rotate(-90deg);
+}
+
+.left div.t3 {
+    background-color: #FFF;
+    transform: rotate(-135deg);
+}
+
+
+.right div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: left center;
+}
+
+.right div.t4 {
+    background-color: #FFF;;
+}
+
+.right div.t5 {
+    background-color: #FDDDD7;
+    transform: rotate(45deg);
+}
+
+.right div.t6 {
+    background-color: #FFF;;
+    ;
+    transform: rotate(90deg);
+}
+
+.right div.t7 {
+
+    background-color: #FDDDD7;;
+    transform: rotate(135deg);
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #F27F2E;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+
+.circle:after {
+    width: 0;
+    height: 0;
+    border: 40px solid #F27F2E;
+    ;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    position: absolute;
+    content: "";
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    top: -70px;
+    left: calc(50% - 10px);
+    z-index: -1;
+}

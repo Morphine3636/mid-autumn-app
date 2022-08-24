@@ -30,7 +30,7 @@ export default function MoonSuccess(props){
             </div>
             <div className="menu">
                 <a onClick={ ()=>navigate('/Moon') }><img src={ require('@/Assets/ag.png') } width={160}></img></a>
-                <a><img src={ require('@/Assets/golottery.png') } width={160}></img></a>
+                <a onClick={ ()=>navigate('/Draw') }><img src={ require('@/Assets/golottery.png') } width={160}></img></a>
             </div>
         </div>
     )
