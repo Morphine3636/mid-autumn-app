@@ -2,7 +2,7 @@ import axios from "axios";
 // import { message } from 'antd';
 
 axios.defaults.headers = {
-    // 'authorization': typeof localStorage.k ==='undefined'?'': localStorage.k
+    'authorization': typeof localStorage.k ==='undefined'?'': localStorage.k
 }
 
 // 错误码管控

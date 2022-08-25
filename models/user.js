@@ -12,7 +12,7 @@ const UserSchema = new Schema({
     "lotteryTimes": Number,   // 抽奖次数
     "prize": String,          // 奖品
     "couponCode": String,     // 券码
-    "lastLotteryTime": String,  // 最后一次抽奖的日期
+    "lastLotteryTime":Array,  // 记录每天获得了多少次奖
     "isVip": Boolean  // 是否为超管
 })
 
